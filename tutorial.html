@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to use</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-title">How to use?</div>
+
+<div class="content fadeIn">
+    <h1 class="smallertitle">I'll go over every function I've implemented <br>because tbf I <u>do</u> think it's unclear</h1>
+
+    <h2>First you click the clientid button</h2>
+    <p>Here you will enter the clientid you got from Spotify in the <a href="https://developer.spotify.com/dashboard" target="_blank">Spotify Developer Dashboard</a></p>
+</p>
+    <h2>Then you click auth</h2>
+    <p>This shows you a popup from Spotify saying do you want to connect this app?</p>
+    <h2>Authenticated</h2>
+    <p>You should see your token on the top</p>
+    <p>From here you can go to <a href="#playlists">Playlists</a> or <a href="#tracks">Tracks</a></p>
+    <h1 id="playlists" class="notsmall">Playlists</h1>
+    <p>You should see your recent playlists here</p>
+    <p>Clicking on them expands/collapses and changes <b>Playlists</b> to <b>Recommend</b> which is now clickable</p>
+    <p>Click on <b>Recommend</b></p>
+    <h2>Recommend</h2>
+    <p>Shows the content of your playlist</p>
+    <p>Here you create a new playlist after you have given it a name</p>
+    <p>You will be redirected to <b>Recommendations</b> in a bit</p>
+    <h2>Recommendations</h2>
+    <p>Here you will be shown max 20 tracks at a time</p>
+    <p>These are your recommendations</p>
+    <p>You can click <b>add</b> if you are satisfied with the selection</p>
+    <h1 id="tracks" class="notsmall">Tracks</h1>
+    <p>Here you search for a track you want to use as a starting point </p>
+    <p>First you'll have to make a playlist to add songs to so you can start your shopping spree</p>
+    <p>You do this by clicking the judging books button </p>
+    <p>Clicking the <b>album art</b> adds tracks to your shoppinglist🛒 <i>(playlist)</i> </p>
+    <p>Clicking the <b>track title</b> generates <b>new recommendations</b>  
+ <h1 class="smalltitle">I want to judge books by their covers</h1>
+    <p>This creates a shoppinglist🛒<i>(sic)</i></p>
+    <p>The shoppinglist🛒 is a playlist on your Spotify account</p>
+    <p>You can now 'shop' for tracks🥳</p>
+ <h1 class="smalltitle">Search bar</h1>
+    <p>You can search for tracks by clicking Search or pressing enter</p>
+ <h1 class="smalltitle">Album art</h1>
+    <p>Clicking album art <b>adds</b> the song to your shoppinglist🛒</p>
+    <p>Hovering over the Album Art plays a 30 second preview🎧</p>
+    <p>Hovering over the Album Art also shows you its popularity</p>
+ <h1 class="smalltitle">Clicking track title</h1>
+    <p>Clicking track title <b>generates</b> new <b>recommendations</b></p>
+ <h1 class="smalltitle">Clicking the shopping cart🛒</h1>
+    <p>Clicking this shows your current cart</p>
+    <p>It shows you all the tracks you have added so far</p>
+    <h1 class="smalltitle">Clicking the bin🗑️</h1>
+    <p>Empties your cart i.e. deletes all the tracks in it</p>
+    <h1 class="smalltitle">Clicking the tracks within the 🛒</h1>
+    <p>Clicking a track deletes only that track from your playlist</p>
+    <h1 class="smalltitle">Volume Button</h1>
+    <p>-25+   clicking - lowers the volume</p>
+    <p>-25+   clicking + highers the volume</p>
+    <h1 class="smalltitle">Popularity Slider</h1>
+<div class="slider-container">
+    <input type="range" id="popularitySlider" min="1" max="100" value="100" orient="vertical">
+</div>
+<label for="popularitySlider"></label>
+    <p>Adjusting the slider filters by popularity</p>
+    <p>Left means more niche</p>
+    <p>Right means more popular</p>
+    <h1 class="smalltitle">The arabic word نَفْس nefs</h1>
+    <p>This is your dark mode/light mode toggle</p>
+       <h1 id="help" class="help">Help? it stopped working</h1>
+       <h1 class="smalltitle">Rate limits</h1>
+    <p>Be careful not to go too fast</p>
+    <p>Doing so will result in you being blocked from using the Spotify API</p>
+    <p>If this happens you'll have to create a <b>new app</b> to get a new <b>clientid</b></p>
+    <p>This is a workaround should this happen</p>
+       <h1 class="smalltitle">Auth Token</h1>
+    <p>Your tokens expire in about an hour or so</p>
+    <p>It could happen that you need to re-auth</p>
+    <p>Check the Authenticated page if you still see your token at the top</p>
+</div>
+
+<a href="index.html" class="back-link">Back</a>
+<a href="#help" class="help-link">Help? it stopped working</a>
+<script src="script.js"></script>
+</body>
+</html>
