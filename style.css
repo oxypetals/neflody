@@ -84,18 +84,19 @@ button[type="submit"]:hover {
 }
 .help-link {
     position: fixed;
-top:0 ;
-right: 0;
-    font-size: 25px; /* Your desired font size */
-    color: #121615; /* Your font color */
+    top: 20px; /* Adjusted top position */
+    right: 20px;
+    font-size: 25px;
+    color: #121615;
     text-decoration: none;
-    background-color: #ffffff5e; /* Background color for the link */
-    padding: 10px 20px; /* Padding for better click area */
-    border-radius: 10px; /* Rounded corners */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    background-color: #ffffff5e;
+    padding: 10px 20px; /* Adjusted padding */
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
 }
+
 .help-link:hover {
-    background-color: #e0e0e0; /* Lighter background color on hover */
+    background-color: #e0e0e0;
 }
 .forth-link {
     position: fixed;
@@ -164,14 +165,74 @@ margin-top: 70px;
     height: calc(100vh - 200px); /* Adjust height to fit the content area */
 }
 
-.content::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
-    background-color: transparent; /* Make scrollbar transparent */
-}
-
-.content::-webkit-scrollbar-thumb {
-    background-color: transparent; /* Make scrollbar thumb transparent */
-}
   h1[id], h2[id] {
             scroll-margin-top: 150px; /* Adjust as needed */
         }
+
+/* Existing styles */
+/* Add responsive design adjustments */
+#tutorialText {
+    padding: 0 0px; /* Add padding to prevent text from getting cut off */
+    box-sizing: border-box; /* Include padding in the element's total width */
+    max-width: 100%; /* Ensure the text doesn't overflow on smaller screens */
+}
+
+#tutorialText p {
+    font-size: 16px; /* Adjust font size for readability on mobile */
+    word-wrap: break-word; /* Allow long words to break and wrap onto the next line */
+}
+@media (max-width: 768px) {
+      #tutorialText {
+        padding: 0; /* Remove padding on mobile */
+    }
+
+    #tutorialText p {
+        font-size: 9px; /* Smaller font size for mobile */
+        margin: 10px 0; /* Add vertical margin for spacing */
+    }
+    .page-title {
+        font-size: 48px; /* Smaller font size for mobile */
+        margin: 20px 10px; /* Adjust margin for smaller screens */
+    }
+    .smallertitle, .notsmall, .help, .smalltitle {
+        font-size: 20px; /* Adjust font size for readability on smaller screens */
+        margin-top: 100px; /* Adjust margin to prevent overlap */
+    }
+    .back-link, .forth-link {
+        font-size: 18px; /* Smaller buttons for smaller screens */
+        padding: 5px 10px; /* Adjust padding */
+        bottom: 10px; /* Adjust position */
+        right: 10px; /* Adjust position for help-link */
+    }
+  .help-link {
+        font-size: 20px; /* Adjust font size for smaller screens */
+}
+    .content {
+        height: auto; /* Allow content to expand as needed on smaller screens */
+        margin-bottom: 50px; /* Provide space for the fixed position back link */
+    }
+    .feedback-message {
+        font-size: 24px; /* Make feedback message readable on small devices */
+    }
+}
+
+.content {
+    opacity: 1; /* Start visible to avoid delay in visibility */
+    overflow-y: auto; /* Enable vertical scrollbar when needed */
+    max-height: 80vh; /* Adjust height to fit within viewport on all devices */
+    padding: 20px; /* Ensure padding is consistent */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+
+/* Make scrollbar and its thumb transparent */
+.content::-webkit-scrollbar,
+.content::-webkit-scrollbar-thumb {
+    background-color: transparent;
+}
+
+
+/* Scroll margin-top for anchor links to prevent overlap with fixed header or other elements */
+h1[id], h2[id] {
+    scroll-margin-top: 100px; /* Adjust as needed */
+}
